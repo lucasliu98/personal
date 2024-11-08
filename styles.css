@@ -61,7 +61,7 @@ nav {
     background-color: var(--verde);
     color: #fff;
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
 }
 
 .hero h1 {
@@ -71,6 +71,16 @@ nav {
 
 .hero p {
     font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    margin-top: 20px;
+}
+
+.hero-image img {
+    max-width: 150px; /* Imagem pequena na página inicial */
+    border-radius: 50%;
 }
 
 /* Botão padrão */
@@ -124,13 +134,47 @@ nav {
 
 .about-image img {
     max-width: 100%;
+    max-height: 200px; /* Ajuste conforme necessário */
+    border-radius: 5px;
+}
+
+/* Seção Serviços na Página Inicial */
+.services-home {
+    background-color: var(--cinza-claro);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-home h2 {
+    margin-bottom: 40px;
+}
+
+.services-home-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-home-item {
+    width: 150px; /* Largura fixa para imagens pequenas */
+    margin: 10px;
+    text-align: center;
+}
+
+.service-home-item img {
+    width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-/* Seção Serviços */
+.service-home-item h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--azul);
+}
+
+/* Seção Serviços na Página de Serviços */
 .services {
-    background-color: var(--cinza-claro);
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -141,42 +185,65 @@ nav {
     margin-bottom: 40px;
 }
 
-.services-container {
+.services-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .service-item {
-    display: flex;
-    flex: 1 1 45%;
+    width: 48%; /* Dois itens por linha */
     margin-bottom: 40px;
-    align-items: center;
-}
-
-.service-image {
-    flex: 1;
     text-align: center;
 }
 
-.service-image img {
-    max-width: 100%;
-    max-height: 150px; /* Ajuste a altura máxima conforme necessário */
+.service-item img {
+    width: 100%;
+    max-width: 250px; /* Imagens um pouco maiores */
+    height: auto;
     border-radius: 5px;
 }
 
-.service-text {
-    flex: 2;
-    margin-left: 20px;
-}
-
-.service-text h3 {
+.service-item h3 {
+    margin-top: 15px;
     color: var(--azul);
-    margin-bottom: 10px;
 }
 
-.service-text p {
+.service-item p {
+    margin-top: 10px;
     color: #666;
+}
+
+/* Responsividade para serviços */
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+}
+
+/* Botão de Voltar à Página Inicial */
+.back-home {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.back-home .btn {
+    display: inline-block;
+    background-color: var(--azul);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.back-home .btn:hover {
+    background-color: #062d56;
 }
 
 /* Seção Contato */
@@ -233,32 +300,21 @@ nav {
 
 .contact-image img {
     max-width: 100%;
-    height: auto;
+    max-height: 200px; /* Ajuste conforme necessário */
     border-radius: 5px;
 }
 
 /* Ajuste para telas menores */
 @media (max-width: 768px) {
     .about-container,
-    .services-container,
     .contact-container {
         flex-direction: column;
     }
 
     .about-text,
-    .service-text,
     .contact-text {
         margin-right: 0;
         margin-bottom: 20px;
-    }
-
-    .service-item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-text {
-        margin-left: 0;
     }
 }
 
