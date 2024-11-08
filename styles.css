@@ -34,7 +34,7 @@ nav {
 }
 
 .logo img {
-    max-height: 20px;
+    max-height: 60px;
 }
 
 .nav-links {
@@ -73,74 +73,105 @@ nav {
     font-size: 24px;
 }
 
-/* Seções */
-section {
+/* Seção Sobre */
+.about {
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Seção Sobre */
-.about {
-    background-color: var(--cinza-claro);
-    text-align: center;
-}
-
-.about img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-}
-
-/* Seção Serviços */
-.services-container {
+.about-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
 }
 
-.service-item {
-    width: 45%;
-    margin-bottom: 40px;
-    text-align: center;
+.about-text {
+    flex: 1;
+    min-width: 280px;
+    margin-right: 20px;
 }
 
-.service-item img {
-    max-width: 100%;
-    height: auto;
+.about-text h2 {
+    margin-bottom: 20px;
 }
 
-.service-item h3 {
-    margin: 20px 0 10px;
-    color: var(--azul);
-}
-
-.service-item p {
+.about-text p {
+    margin-bottom: 15px;
     color: #666;
 }
 
-/* Seção Contato */
-.contact {
-    background-color: var(--cinza-claro);
+.about-image {
+    flex: 1;
+    min-width: 280px;
     text-align: center;
 }
 
-.contact-info {
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Seção Serviços na Página Inicial */
+.services-home {
+    background-color: var(--cinza-claro);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-home h2 {
+    margin-bottom: 20px;
+}
+
+.services-home p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.services-list {
     list-style: none;
-    margin-top: 20px;
 }
 
-.contact-info li {
-    margin-bottom: 10px;
+.services-list li {
+    margin: 10px 0;
 }
 
-.contact-info a {
+.services-list a {
     color: var(--azul);
     text-decoration: none;
+    font-weight: bold;
 }
 
-.contact-info a:hover {
+.services-list a:hover {
     text-decoration: underline;
+}
+
+/* Botão padrão */
+.btn {
+    display: inline-block;
+    background-color: var(--azul);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #062d56;
 }
 
 /* Rodapé */
@@ -149,93 +180,4 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
-}
-
-.hero-buttons {
-    margin-top: 20px;
-}
-
-.hero-buttons .btn {
-    display: inline-block;
-    background-color: var(--azul);
-    color: #fff;
-    padding: 10px 20px;
-    margin: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.hero-buttons .btn:hover {
-    background-color: #062d56;
-}
-
-/* Serviços na página de serviços */
-.services .services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.services .service-item {
-    width: 48%;
-    margin-bottom: 40px;
-}
-
-.services .service-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.services .service-item h3 {
-    margin-top: 15px;
-    color: var(--azul);
-}
-
-.services .service-item p {
-    margin-top: 10px;
-    color: #666;
-}
-
-@media (max-width: 768px) {
-    .services .service-item {
-        width: 100%;
-    }
-}
-
-/* Estilos para o formulário de contato */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.contact-form label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-form button {
-    margin-top: 20px;
-    background-color: var(--verde);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #05512f;
 }
