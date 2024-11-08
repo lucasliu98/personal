@@ -73,26 +73,6 @@ nav {
     font-size: 24px;
 }
 
-/* Botões na Seção Hero */
-.hero-buttons {
-    margin-top: 20px;
-}
-
-.hero-buttons .btn {
-    display: inline-block;
-    background-color: var(--azul);
-    color: #fff;
-    padding: 10px 20px;
-    margin: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.hero-buttons .btn:hover {
-    background-color: #062d56;
-}
-
 /* Botão padrão */
 .btn {
     display: inline-block;
@@ -148,62 +128,16 @@ nav {
     border-radius: 5px;
 }
 
-/* Ajuste para telas menores */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-    }
-
-    .about-text {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-}
-
-/* Seção Serviços na Página Inicial */
-.services-home {
-    background-color: var(--cinza-claro);
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.services-home h2 {
-    margin-bottom: 20px;
-}
-
-.services-home p {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.services-list {
-    list-style: none;
-    padding: 0;
-}
-
-.services-list li {
-    margin: 10px 0;
-}
-
-.services-list a {
-    color: var(--azul);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.services-list a:hover {
-    text-decoration: underline;
-}
-
-/* Seção Serviços na Página de Serviços */
+/* Seção Serviços */
 .services {
+    background-color: var(--cinza-claro);
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .services h2 {
+    text-align: center;
     margin-bottom: 40px;
 }
 
@@ -214,112 +148,118 @@ nav {
 }
 
 .service-item {
-    width: 48%;
+    display: flex;
+    flex: 1 1 45%;
     margin-bottom: 40px;
+    align-items: center;
+}
+
+.service-image {
+    flex: 1;
     text-align: center;
 }
 
-.service-item img {
-    width: 100%;
-    max-width: 300px; /* Define a largura máxima */
-    height: auto;
+.service-image img {
+    max-width: 100%;
+    max-height: 150px; /* Ajuste a altura máxima conforme necessário */
     border-radius: 5px;
-    margin: 0 auto;
-    display: block;
 }
 
-.service-item h3 {
-    margin-top: 15px;
+.service-text {
+    flex: 2;
+    margin-left: 20px;
+}
+
+.service-text h3 {
     color: var(--azul);
+    margin-bottom: 10px;
 }
 
-.service-item p {
-    margin-top: 10px;
+.service-text p {
     color: #666;
-}
-
-/* Responsividade para serviços */
-@media (max-width: 768px) {
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-item {
-        width: 100%;
-    }
-}
-
-/* Botão de Voltar à Página Inicial */
-.back-home {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.back-home .btn {
-    display: inline-block;
-    background-color: var(--azul);
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.back-home .btn:hover {
-    background-color: #062d56;
 }
 
 /* Seção Contato */
 .contact {
-    background-color: var(--cinza-claro);
-    text-align: center;
     padding: 60px 20px;
-}
-
-.contact h2 {
-    margin-bottom: 20px;
-}
-
-.contact p {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* Estilos para o formulário de contato */
-.contact-form {
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: left;
 }
 
-.contact-form label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
+.contact-text {
+    flex: 1;
+    min-width: 280px;
+    margin-right: 20px;
+}
+
+.contact-text h2 {
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: var(--azul);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-image {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
-.contact-form button {
-    margin-top: 20px;
-    background-color: var(--verde);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .about-container,
+    .services-container,
+    .contact-container {
+        flex-direction: column;
+    }
 
-.contact-form button:hover {
-    background-color: #05512f;
+    .about-text,
+    .service-text,
+    .contact-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .service-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-text {
+        margin-left: 0;
+    }
 }
 
 /* Rodapé */
