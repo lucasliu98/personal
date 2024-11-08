@@ -150,3 +150,92 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.hero-buttons .btn {
+    display: inline-block;
+    background-color: var(--azul);
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #062d56;
+}
+
+/* Serviços na página de serviços */
+.services .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services .service-item {
+    width: 48%;
+    margin-bottom: 40px;
+}
+
+.services .service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.services .service-item h3 {
+    margin-top: 15px;
+    color: var(--azul);
+}
+
+.services .service-item p {
+    margin-top: 10px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .services .service-item {
+        width: 100%;
+    }
+}
+
+/* Estilos para o formulário de contato */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    background-color: var(--verde);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #05512f;
+}
