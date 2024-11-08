@@ -61,7 +61,7 @@ nav {
     background-color: var(--verde);
     color: #fff;
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
 }
 
 .hero h1 {
@@ -71,16 +71,6 @@ nav {
 
 .hero p {
     font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.hero-image {
-    margin-top: 20px;
-}
-
-.hero-image img {
-    max-width: 150px; /* Imagem pequena na página inicial */
-    border-radius: 50%;
 }
 
 /* Botão padrão */
@@ -134,8 +124,20 @@ nav {
 
 .about-image img {
     max-width: 100%;
-    max-height: 200px; /* Ajuste conforme necessário */
+    max-height: 300px; /* Ajuste o tamanho conforme necessário */
     border-radius: 5px;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
 
 /* Seção Serviços na Página Inicial */
@@ -146,7 +148,7 @@ nav {
 }
 
 .services-home h2 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .services-home-container {
@@ -156,21 +158,19 @@ nav {
 }
 
 .service-home-item {
-    width: 150px; /* Largura fixa para imagens pequenas */
-    margin: 10px;
+    margin: 10px 20px;
     text-align: center;
-}
-
-.service-home-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
 }
 
 .service-home-item h3 {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--azul);
+}
+
+/* Botão na Seção Serviços */
+.services-home .btn {
+    margin-top: 20px;
 }
 
 /* Seção Serviços na Página de Serviços */
@@ -199,7 +199,7 @@ nav {
 
 .service-item img {
     width: 100%;
-    max-width: 250px; /* Imagens um pouco maiores */
+    max-width: 150px; /* Imagens menores */
     height: auto;
     border-radius: 5px;
 }
@@ -244,78 +244,6 @@ nav {
 
 .back-home .btn:hover {
     background-color: #062d56;
-}
-
-/* Seção Contato */
-.contact {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.contact-text {
-    flex: 1;
-    min-width: 280px;
-    margin-right: 20px;
-}
-
-.contact-text h2 {
-    margin-bottom: 20px;
-}
-
-.contact-text p {
-    margin-bottom: 15px;
-    color: #666;
-}
-
-.contact-info {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-info li {
-    margin-bottom: 10px;
-}
-
-.contact-info a {
-    color: var(--azul);
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-.contact-image {
-    flex: 1;
-    min-width: 280px;
-    text-align: center;
-}
-
-.contact-image img {
-    max-width: 100%;
-    max-height: 200px; /* Ajuste conforme necessário */
-    border-radius: 5px;
-}
-
-/* Ajuste para telas menores */
-@media (max-width: 768px) {
-    .about-container,
-    .contact-container {
-        flex-direction: column;
-    }
-
-    .about-text,
-    .contact-text {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
 }
 
 /* Rodapé */
